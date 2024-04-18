@@ -4,7 +4,6 @@ import { etherlinkTestnet } from "@/app/chain"
 import { client } from "@/app/client"
 import { ConnectButton } from "thirdweb/react"
 import { inAppWallet } from "thirdweb/wallets";
-import { ACCOUNT_FACTORY_ADDRESS } from "../const/addresses";
 
 const wallets = [
   inAppWallet()
@@ -12,7 +11,7 @@ const wallets = [
 
 const accountAbstraction = {
   chain: etherlinkTestnet,
-  factoryAddress: ACCOUNT_FACTORY_ADDRESS || "",
+  factoryAddress: process.env.NEXT_PUBLIC_ACCOUNT_FACTORY_ADDRESS || "",
   gasless: true
 }
 
