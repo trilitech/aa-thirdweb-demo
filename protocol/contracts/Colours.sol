@@ -2,15 +2,15 @@
 pragma solidity ^0.8.20;
 
 contract Colours {
-    mapping(address => string) public colour;
+    mapping(address => string) public color;
 
-    event ColourUpdated(address indexed user, string newColour);
+    event ColorUpdated(address indexed user, string newColor);
 
     constructor() {}
 
-    function changeColour(string memory newColour) public {
-        require(bytes(newColour).length > 0, "empty colour");
-        colour[msg.sender] = newColour;
-        emit ColourUpdated(msg.sender, newColour);
+    function changeColor(string memory newColor) public {
+        require(bytes(newColor).length > 0, "empty color");
+        color[msg.sender] = newColor;
+        emit ColorUpdated(msg.sender, newColor);
     }
 }
