@@ -1,4 +1,5 @@
 import { defineChain } from "thirdweb";
+import { arbitrumSepolia } from "thirdweb/chains";
 
 export const etherlinkTestnet = defineChain({
     id: 128123,
@@ -18,3 +19,5 @@ export const etherlinkTestnet = defineChain({
     ],
     testnet: true
 });
+
+export const arbitrumSepoliaChain = defineChain(arbitrumSepolia);
